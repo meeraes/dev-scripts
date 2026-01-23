@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+if [ $# -ne 2 ]; then
+	exit 1;
+fi
+
+COMMIT_ID=$1
+LOG_FILE=$2
+
+grep -nr "$COMMIT_ID" "$LOG_FILE"
