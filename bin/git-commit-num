@@ -3,6 +3,7 @@
 set -euo pipefail
 
 if [ $# -ne 2 ]; then
+	echo 'Usage: git-commit-num <commit-id (max 8 digits)> <log-file>' >&2
 	exit 1;
 fi
 

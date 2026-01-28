@@ -2,6 +2,11 @@
 
 set -euo pipefail
 
+if [ $# -ne 2 ]; then
+	echo 'Usage: git-search-string <string> <file_name>' >&2
+	exit 1;
+fi
+
 STRING=$1
 FILE=$2
 
